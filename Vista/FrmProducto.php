@@ -1,14 +1,14 @@
 <?php
 class FrmProducto {
-    private CtrProducto $controlador;
+    private CtrProducto $control;
 
     public function __construct() {
-        $this->controlador = new CtrProducto();
+        $this->control = new CtrProducto();
     }
 
     public function guardar() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $producto = $this->controlador->crearProducto($_POST['codigo'], $_POST['nombre'], $_POST['stock'], $_POST['valorUnitario']);
+            $producto = $this->control->crearProducto($_POST['codigo'], $_POST['nombre'], $_POST['stock'], $_POST['valorUnitario']);
             echo "Producto creado: " . $producto->getNombre();
         }
     }
