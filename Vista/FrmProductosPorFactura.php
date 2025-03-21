@@ -1,5 +1,5 @@
 <?php
-$controlador = new CtrCliente();
+$control = new CtrCliente();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $codigo = $_POST["codigo"];
@@ -8,6 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono = $_POST["telefono"];
     $credito = $_POST["credito"];
     
-    $controlador->guardarCliente($codigo, $nombre, $email, $telefono, $credito);
+    $control->guardarCliente($codigo, $nombre, $email, $telefono, $credito);
 }
 ?>
