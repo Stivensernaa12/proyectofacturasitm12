@@ -1,5 +1,5 @@
 <?php
-require_once '../Control/CtrPersona.php'; // Incluir el controlador
+require_once '../Control/CtrPersona.php'; // Incluir el control
 
 $control = new CtrPersona();
 
@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $nombre = trim($_POST["nombre"]);
                 $apellido = trim($_POST["apellido"]);
                 $email = trim($_POST["email"]);
-                $controlador->ingresar($nombre, $apellido, $email);
+                $control->ingresar($nombre, $apellido, $email);
                 break;
 
             case "eliminar":
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Obtener la lista de personas
-$personas = $controlador->listar();
+$personas = $control->listar();
 
 // Mostrar resultados en formato simple
 echo "Lista de Personas:\n";
