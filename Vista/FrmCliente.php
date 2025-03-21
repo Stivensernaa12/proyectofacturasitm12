@@ -1,7 +1,7 @@
 <?php
-require_once '../Controlador/CtrPersona.php'; // Incluir el controlador
+require_once '../Control/CtrPersona.php'; // Incluir el controlador
 
-$controlador = new CtrPersona();
+$control = new CtrPersona();
 
 // Verificar si se envió un formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             case "eliminar":
                 $id = intval($_POST["id"]);
-                $controlador->eliminar($id);
+                $control->eliminar($id);
                 break;
         }
     }
